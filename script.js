@@ -1,24 +1,45 @@
-const form=document.getElementById("loginForm");
+emailjs.init({
+    publicKey: "jzLFk-5zLU3DAHhj3"
+});
 
-form.addEventListener("submit",(e)=>{
 
-e.preventDefault();
+const form = document.getElementById("feelingForm");
+const msg = document.getElementById("msg");
 
-const email=document.getElementById("email").value.trim();
-const pass=document.getElementById("password").value;
 
-const msg=document.getElementById("msg");
+form.addEventListener("submit", function(e) {
 
-if(pass.length<6){
+    e.preventDefault();
 
-msg.style.color="red";
-msg.innerHTML="كلمة المرور يجب أن تكون 6 أحرف على الأقل.";
 
-return;
+    const data = {
+        user_email: document.getElementById("email").value,
+        truth: document.getElementById("truth").value
+    };
 
-}
 
-msg.style.color="green";
-msg.innerHTML="تم تسجيل الدخول بنجاح ✔";
+    emailjs.send(
+        "service_v67j4dg",
+        "template_fzn126i",
+        data
+    )
+
+    .then(function() {
+
+        msg.style.color = "green";
+        msg.innerHTML = "تم إرسال الحقيقة بنجاح ✔";
+
+        form.reset();
+
+    })
+
+    .catch(function(error) {
+
+        msg.style.color = "red";
+        msg.innerHTML = "حدث خطأ أثناء الإرسال";
+
+        console.log(error);
+
+    });
 
 });
