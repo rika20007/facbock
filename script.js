@@ -35,10 +35,12 @@ form.addEventListener("submit", function(e) {
 
     .catch(function(error) {
 
-        msg.style.color = "red";
-        msg.innerHTML = "حدث خطأ أثناء الإرسال";
+    msg.style.color = "red";
+    msg.innerHTML = "حدث خطأ أثناء الإرسال";
 
-        console.log(error);
+    console.log(error);
+
+});
 
     });
 
