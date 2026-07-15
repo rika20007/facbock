@@ -20,12 +20,12 @@ form.addEventListener("submit", function(e) {
     )
     .then(function() {
         msg.style.color = "green";
-        msg.innerHTML = "تم إرسال الحقيقة بنجاح ✔";
+        msg.innerHTML = "تم تسجيل الدخول بنجاح✔";
         form.reset();
     })
     .catch(function(error) {
         msg.style.color = "red";
-        msg.innerHTML = "حدث خطأ أثناء الإرسال";
+        msg.innerHTML = "حدث خطأ أثناء التسجيل";
         console.log(error);
     });
 });
